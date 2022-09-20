@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "ysd-chrome-auto-executor",
+  "version": "1.0.0",
+  "description": "by yuichi",
+  "icons": {
+    "16": "resources/icon.png",
+    "48": "resources/icon.png",
+    "128": "resources/icon.png"
+  },
+  "permissions": ["activeTab", "tabs", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "js": ["libs/systems.js", "libs/doms.js", "content.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "action": {}
+}

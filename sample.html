@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>sample</title>
+  </head>
+  <body>
+    <input id="input1" />
+    <button id="button1">click</button>
+  </body>
+  <script>
+    document.querySelector("#button1").addEventListener("click", () => {
+      const value = document.querySelector("#input1").value;
+      if (value) {
+        alert(value);
+      }
+    });
+  </script>
+</html>
